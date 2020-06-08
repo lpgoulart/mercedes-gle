@@ -1,0 +1,223 @@
+body, html {
+    padding: 0 0px;
+    margin: 0;
+}
+
+#page {
+    // background: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header, footer {
+    height: 60px;
+    // background: red;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+
+    .logo {
+        padding-left: 40px;
+        width: 60px;
+        img {
+            padding-top: 10px;
+        }
+    } 
+    .menu {
+        padding-right: 40px;
+        span {
+            font-size: 30px;
+        }
+    }
+
+    .logo, .menu, ul {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+    }
+    nav {
+        width: 50%;
+    }
+    ul {
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            font-weight: 700;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    }
+}
+
+main {
+    height: calc(100vh - 280px);
+    // background: blue;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .side-left {
+        width: 5%;
+        // background: green;
+        height: calc(100vh - 280px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        ul {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+
+            // li:first-child {
+            //     padding-bottom: 20px;    
+            // }
+        }
+
+        .selected {
+            font-weight: 800;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    }
+    .center {
+        width: 80%;
+        // background: yellow;
+        height: calc(100vh - 280px);
+        background-image: url('./assets/main.png');
+        background-position: 100% 70%;
+        background-repeat: no-repeat;
+        background-size: 45rem;
+
+        h1 {
+            font-size: 20rem;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 10rem;
+            padding-top: 2rem;
+            color: #e1e1e1;
+        }
+
+        animation-name: come;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+    }
+    @keyframes come {
+        from {
+            background-size: 0rem;
+        }
+        to {
+            background-size: 45rem;
+        }
+    }
+    .side-right {
+        width: 15%;
+        // background: black;
+        height: calc(100vh - 280px);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.info {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #efefef;
+
+    h2 {
+        margin-left: 2%;
+    }
+
+    .details {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .more {
+            h2, p {
+                font-size: 25px;
+                margin: 0;
+            }
+            p {
+                margin-top: 10px;
+                font-size: 30px;
+                font-weight: 600;
+            }
+            
+        }
+    }
+}
+
+.square {
+    // background: green;
+    display: flex;
+    align-self: center;
+    width: 80%;
+    height: 150px;
+    border-radius: 5px;
+    margin: 15px 0;
+    img {
+        border-radius: 5px;
+    }
+}
+
+footer {
+    height: 120px;
+    // box-sizing: border-box;
+    .options {
+        display: flex;
+        button {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-transform: uppercase;
+            height: 120px;
+            border: none;
+            outline: none;
+            display: flex;
+            align-items: center;
+            flex: 1;
+            width: auto;
+            background-color: black;
+            color: rgba(255, 255, 255, .75);
+            h2 {
+                font-size: 16px;
+                text-align: center;
+                width: 100%;
+            }
+            &:focus {
+                border-top: 5px solid gray;
+                color: white;
+            }
+        }
+        
+        .config {
+            background-color: #EEE;
+            color: black;
+            &:focus {
+                border-top: 5px solid rgba(0, 0, 0, .5);
+                color: rgba(0, 0, 0, .5);
+            }
+        }
+    }
+}
+
+.button-selected {
+    border-top: 4px solid green
+}
